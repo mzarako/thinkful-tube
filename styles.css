@@ -28,11 +28,11 @@ form {
 }
 
 input {
-	color:    #a3173a;
+	color: #a3173a;
     font-family: 'Karla', sans-serif;
     font-weight: bold;
 	width: 30%;
-	border: 1px solid #ac6217;
+	border: 1px solid #a3173a;
 	padding: 5px;
 	font-size: .8em;
 	box-shadow: none;
@@ -74,8 +74,8 @@ button {
 }
 
 main {
-	margin: 0 5%;
-	padding: 100px 0;
+	
+	padding: 140px 5% 60px 5%;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;

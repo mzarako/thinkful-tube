@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
 
 	searchKeyword("kittens");
@@ -7,11 +5,9 @@ $(document).ready(function() {
 	$('form').submit(function(e) {
 	e.preventDefault();
 	var userInput = $('#userInput').val();
-	console.log(userInput);
 	searchKeyword(userInput);
 	});
 });
-
 
 function searchKeyword(wordToFind) {
 	var para = {
@@ -21,16 +17,16 @@ function searchKeyword(wordToFind) {
 		maxResults: 24,
 		type: 'video',
 	};
-	console.log(para);
 	var Yurl = "https://www.googleapis.com/youtube/v3/search";
 	$.getJSON(Yurl, para, function(data) {
 		displayResults(data.items);
 	})
 }
 
+
 function displayResults(results) {
-	$('main').children().remove();
 	var elements = "";
+	$('main').children().remove();
 	$.each(results, function(index, value) {
 		elements += '<table><tr><td><a href="https://www.youtube.com/watch?v=' + value.id.videoId + '" target="_blank"><img src="' + 
 		value.snippet.thumbnails.medium.url + '"></td></tr><tr><td class="video-link"><a href="https://www.youtube.com/watch?v=' + 
